@@ -14,18 +14,28 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          submodules: true  # 添加这行，确保主题被正确克隆
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.140.1'
+          extended: true    # 添加这行，使用 extended 版本
 
       - name: Build Hugo Site
-        run: hugo --minify
+        env:
+          HUGO_ENV: production
+        run: |
+          hugo version
+          hugo --minify --debug
+          ls -la public/   # 检查生成的文件
+
+      - name: Create CNAME
+        run: echo 'yingteng.me' > public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
-          publish_branch: gh-pages  # 改为 gh-pages 分支
+          publish_branch: gh-pages
