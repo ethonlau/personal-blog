@@ -1,30 +1,26 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # 指定触发 workflow 的分支，例如 main 或 master
+      - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Hugo
-        uses: peaceiris/actions-hugo@v2
+      - uses: actions/checkout@v3
         with:
-          hugo-version: '0.140.1' # 使用你需要的 Hugo 版本
-          extended: true
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod (if needed)
 
-      - name: Build Hugo site
-        run: hugo --minify
+      - name: Build Hugo Site
+        run: hugo --minify # Replace with your Hugo build command
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./public
-          commit_message: "Deploy to GitHub Pages"
-          force_orphan: true # 强制创建新的 orphan 分支，避免合并冲突
+          publish_branch: main # 指定分支为 main
