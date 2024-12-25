@@ -15,6 +15,11 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod (if needed)
 
+      - name: Set up Hugo
+        uses: actions/setup-hugo@v2
+        with:
+          hugo-version: '0.140.1' # 使用你需要的 Hugo 版本
+
       - name: Build Hugo Site
         run: hugo --minify # Replace with your Hugo build command
 
