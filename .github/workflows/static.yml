@@ -11,27 +11,41 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          submodules: true  # 添加这行，确保主题被正确克隆
+          submodules: true
+
+      - name: Check directory structure
+        run: |
+          pwd
+          ls -la
+          echo "Theme directory:"
+          ls -la themes/
 
       - name: Set up Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.140.1'
-          extended: true    # 添加这行，使用 extended 版本
+          extended: true
+
+      - name: Hugo version
+        run: hugo version
 
       - name: Build Hugo Site
         env:
           HUGO_ENV: production
         run: |
-          hugo version
           hugo --minify --debug
-          ls -la public/   # 检查生成的文件
+          echo "Build complete, checking output:"
+          ls -la public/
 
       - name: Create CNAME
-        run: echo 'yingteng.me' > public/CNAME
+        run: |
+          echo 'yingteng.me' > public/CNAME
+          echo "CNAME created:"
+          cat public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
