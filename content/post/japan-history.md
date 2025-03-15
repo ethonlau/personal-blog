@@ -51,7 +51,7 @@ date = "2025-03-15"
 
 ---
 
-![](/images/japan-history/Guns_Germs_and_Steel.PNG)
+![](/images/japan-history/guns-germs-and-steel.png)
 
 不像朝贡国的朝鲜和越南，日本没有很激进的去汉化、明治维新也没有废除汉字，日本长时间的独立很大程度保有自己的文化特点，他们是在吸收中华文化、而不像朝鲜和越南认为是“被迫接受”。同是儒家文化圈，但实际很多习俗和性格跟中国不同。
 
