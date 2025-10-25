@@ -32,6 +32,6 @@ date = "2025-10-25"
 ![](/images/north-xinjiang-3/sayram-2.jpg)
 ![](/images/north-xinjiang-3/sayram-3.jpg)
 ![](/images/north-xinjiang-3/sayram-4.jpg)
-
+![](/images/north-xinjiang-3/sayram-5.jpg)
 
 我们离开后，还绕道去了霍尔果斯的国门看了一眼，其实不太值得看、没必要专程来一下，除非是想打卡那种临时签证、一脚踏一国的体验。接着我们就去伊宁休整两天，开始最后一段的行程。
