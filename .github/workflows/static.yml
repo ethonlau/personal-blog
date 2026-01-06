@@ -26,7 +26,7 @@ jobs:
         run: hugo --minify
 
       - name: Create CNAME
-        run: echo 'yingteng.me' > public/CNAME
+        run: echo 'yingteng.blog' > public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
