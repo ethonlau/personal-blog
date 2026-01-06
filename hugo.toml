@@ -1,7 +1,7 @@
-baseURL = "https://yingteng.me/"
+baseURL = "https://yingteng.blog/"
 # title = "Hugo Themes"
 author = "Steve Francia"
-copyright = "© 2025, yingteng.me"
+copyright = "© 2026, yingteng.blog"
 paginate = 10
 languageCode = "zh"
 DefaultContentLanguage = "zh"
@@ -17,7 +17,7 @@ title = "刘英滕的 blog"
 [params]
   color = 'gray'
 
-  avatar = 'https://yingteng.me/images/avatar.jpg'
+  avatar = 'https://yingteng.blog/images/avatar.jpg'
   name = 'About me'
   bio = '94 年生，常居上海的广东人，在互联网行业做产品经理，曾经是设计师，也会写些简单的前端代码。在网上常用 ethonlau 这个 ID 活跃。'
 
