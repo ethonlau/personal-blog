@@ -18,17 +18,17 @@ date = "2026-05-21"
 
 而且当时信众都是跪拜，从地面蹲下往上看，更能感受当时人们仰视佛祖菩萨们的生动感觉。
 
-![](/images/gansu-2/45.jpg)
+![](/images/gansu-2/45.JPG)
 
 ![](/images/gansu-2/45-detail.png)
 
 顶部藻井的千佛
 
-![](/images/gansu-2/45-top.jpg)
+![](/images/gansu-2/45-top.JPG)
 
 北壁观无量寿经变，描绘成佛后的西方极乐世界
 
-![](/images/gansu-2/45-north.jpg)
+![](/images/gansu-2/45-north.JPG)
 
 南壁观音三十三化身经变，各种救苦救难，比如送子观音、临刑免难
 
